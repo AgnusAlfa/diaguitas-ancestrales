@@ -1,61 +1,166 @@
-/* 1. IMPORTACIÓN DE FUENTES (Google Fonts) */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap');
+/* 1. IMPORTACIÓN DE FUENTES */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Open+Sans:wght@400;600&display=swap');
 
-/* 2. VARIABLES GLOBALES (El cerebro de nuestro diseño) */
+/* 2. VARIABLES GLOBALES */
 :root {
-    --diaguita-rojo: #A84632;      /* Terracota principal */
+    --diaguita-rojo: #A84632;      
     --diaguita-rojo-oscuro: #853525;
-    --diaguita-crema: #F9F7F3;     /* Fondo tipo "Hueso" */
-    --diaguita-negro: #1A1A1A;     /* Texto legible */
+    --diaguita-crema: #f8f9fa;     
+    --diaguita-negro: #2d3748;     
     --fuente-titulos: 'Montserrat', sans-serif;
     --fuente-cuerpo: 'Open Sans', sans-serif;
 }
 
-/* 3. ESTILOS BASE */
 body {
     background-color: var(--diaguita-crema);
     font-family: var(--fuente-cuerpo);
     color: var(--diaguita-negro);
-    line-height: 1.6;
 }
 
-h1, h2, h3, .navbar-brand {
+h1, h2, h3, h4, h5, .navbar-brand {
     font-family: var(--fuente-titulos);
-    text-transform: uppercase; /* Para darle un toque más sólido */
-    letter-spacing: 1px;
 }
 
-/* 4. COMPONENTES PERSONALIZADOS */
+/* 3. CLASES DE UTILIDAD PARA COLORES */
+.bg-diaguita-primary { background-color: var(--diaguita-rojo) !important; }
+.bg-diaguita-crema { background-color: var(--diaguita-crema) !important; }
+.text-diaguita-primary { color: var(--diaguita-rojo) !important; }
+.text-diaguita-dark { color: var(--diaguita-negro) !important; }
 
-/* Sobrescribimos el color de la barra de navegación de Bootstrap */
-.bg-diaguita-primary {
-    background-color: var(--diaguita-rojo) !important;
+/* 4. LOGO A DOS LÍNEAS */
+.navbar-brand {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 1.1rem !important; 
+    line-height: 0.8 !important; 
+    letter-spacing: -0.5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-/* Botones con identidad */
+.navbar-brand span {
+    font-size: 0.75rem !important; 
+    letter-spacing: 3px; 
+    font-weight: 400;
+}
+
+/* 5. NAVBAR Y LINKS */
+.navbar { transition: all 0.3s ease; }
+.nav-link { color: #4a5568 !important; transition: color 0.3s ease; font-size: 0.95rem; position: relative;}
+.nav-link:hover, .nav-link.active { color: var(--diaguita-rojo) !important; }
+.navbar-nav .nav-link::after {
+    content: ''; position: absolute; width: 0; height: 2px; bottom: 5px; left: 15px; background-color: var(--diaguita-rojo); transition: width 0.3s;
+}
+.navbar-nav .nav-link:hover::after, .navbar-nav .nav-link.active::after { width: calc(100% - 30px); }
+
+/* 6. BOTONES */
 .btn-diaguita {
-    background-color: var(--diaguita-rojo);
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px; /* Bordes menos redondeados para seguir la geometría */
-    font-weight: 600;
-    transition: all 0.3s ease;
+    background-color: var(--diaguita-rojo); color: white; border: none; font-weight: 600; transition: all 0.3s ease;
 }
-
 .btn-diaguita:hover {
-    background-color: var(--diaguita-rojo-oscuro);
-    color: white;
-    transform: translateY(-2px); /* Pequeño salto al pasar el mouse */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    background-color: var(--diaguita-rojo-oscuro); color: white; transform: translateY(-2px);
+}
+.btn-play-video { transition: all 0.3s ease; border: 1px solid #e2e8f0; }
+.btn-play-video:hover {
+    background-color: #fff !important; border-color: var(--diaguita-rojo); color: var(--diaguita-rojo) !important; transform: translateY(-2px);
 }
 
-/* Tarjetas de los juegos */
-.card {
-    border-radius: 0; /* Geometría Diaguita: ángulos rectos */
+/* 7. HERO SECTION */
+.hero-section { padding-top: 120px !important; padding-bottom: 60px; }
+.hero-section h1 { font-size: 3.5rem; line-height: 1.1; }
+.hero-badge { background-color: rgba(168, 70, 50, 0.1); }
+.hero-badge i { animation: pulse-icon 2s infinite; }
+@keyframes pulse-icon { 0% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.2); opacity: 0.7; } 100% { transform: scale(1); opacity: 1; } }
+
+/* 8. IMÁGENES FLOTANTES */
+.hero-images-container { padding: 20px; }
+.floating-card { position: absolute; z-index: 10; animation: float 6s ease-in-out infinite; }
+.stat-card { bottom: -20px; left: -30px; max-width: 300px; }
+@keyframes float { 0% { transform: translateY(0px); } 50% { transform: translateY(-15px); } 100% { transform: translateY(0px); } }
+
+/* 9. SECCIÓN NOSOTROS */
+#nosotros h6 { letter-spacing: 2px; }
+#nosotros .bi-check-circle-fill { font-size: 1.2rem; }
+
+/* 10. RESPONSIVO (MÓVILES) */
+@media (max-width: 991px) {
+    .stat-card { left: 10px; bottom: 10px; }
+}
+
+/* AJUSTES PARA LA CAJA DE EXPERIENCIA (Página 2) */
+.experience-box {
+    transform: translateY(-20px);
+    z-index: 2;
+    min-width: 180px;
+}
+
+/* Línea divisora en el perfil del fundador */
+#nosotros .border-end {
+    border-color: #dee2e6 !important;
+}
+
+/* Tipografía del logo para que se vea profesional */
+.navbar-brand {
+    font-size: 1.1rem !important;
+    letter-spacing: -0.5px;
+}
+
+/* Animación sutil de los iconos de la lista */
+#nosotros .bi-check-circle-fill {
     transition: transform 0.3s ease;
 }
 
-.card:hover {
-    transform: scale(1.02);
+#nosotros li:hover .bi-check-circle-fill {
+    transform: scale(1.2);
 }
+
+/* 11. TARJETAS DE JUEGOS (Efecto Hover Premium) */
+.game-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 12px !important;
+}
+
+.game-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.1) !important;
+}
+
+.icon-box {
+    transition: all 0.3s ease;
+}
+
+/* Cuando pasas el mouse por la tarjeta, el círculo del icono cambia a rojo */
+.game-card:hover .icon-box {
+    background-color: var(--diaguita-rojo) !important;
+    color: white !important;
+}
+
+/* Ajuste del botón outline para que combine con el rojo Diaguita */
+.btn-outline-danger {
+    color: var(--diaguita-rojo);
+    border-color: var(--diaguita-rojo);
+}
+
+.btn-outline-danger:hover {
+    background-color: var(--diaguita-rojo);
+    border-color: var(--diaguita-rojo);
+    color: white;
+}
+
+/* 12. ESTILOS DE CONTACTO Y FOOTER */
+.form-control:focus {
+    box-shadow: none;
+    border: 2px solid var(--diaguita-rojo) !important;
+    background-color: #fff !important;
+}
+
+.footer-link {
+    transition: color 0.3s ease, padding-left 0.3s ease;
+}
+
+.footer-link:hover {
+    color: var(--diaguita-rojo) !important;
+    padding-left: 5px; /* Pequeño salto a la derecha al pasar el mouse */
+}
+
