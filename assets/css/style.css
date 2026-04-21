@@ -1,0 +1,61 @@
+/* 1. IMPORTACIÓN DE FUENTES (Google Fonts) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap');
+
+/* 2. VARIABLES GLOBALES (El cerebro de nuestro diseño) */
+:root {
+    --diaguita-rojo: #A84632;      /* Terracota principal */
+    --diaguita-rojo-oscuro: #853525;
+    --diaguita-crema: #F9F7F3;     /* Fondo tipo "Hueso" */
+    --diaguita-negro: #1A1A1A;     /* Texto legible */
+    --fuente-titulos: 'Montserrat', sans-serif;
+    --fuente-cuerpo: 'Open Sans', sans-serif;
+}
+
+/* 3. ESTILOS BASE */
+body {
+    background-color: var(--diaguita-crema);
+    font-family: var(--fuente-cuerpo);
+    color: var(--diaguita-negro);
+    line-height: 1.6;
+}
+
+h1, h2, h3, .navbar-brand {
+    font-family: var(--fuente-titulos);
+    text-transform: uppercase; /* Para darle un toque más sólido */
+    letter-spacing: 1px;
+}
+
+/* 4. COMPONENTES PERSONALIZADOS */
+
+/* Sobrescribimos el color de la barra de navegación de Bootstrap */
+.bg-diaguita-primary {
+    background-color: var(--diaguita-rojo) !important;
+}
+
+/* Botones con identidad */
+.btn-diaguita {
+    background-color: var(--diaguita-rojo);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px; /* Bordes menos redondeados para seguir la geometría */
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-diaguita:hover {
+    background-color: var(--diaguita-rojo-oscuro);
+    color: white;
+    transform: translateY(-2px); /* Pequeño salto al pasar el mouse */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Tarjetas de los juegos */
+.card {
+    border-radius: 0; /* Geometría Diaguita: ángulos rectos */
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rompecabezas Diaguita | Diaguitas Ancestrales</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <style>
+        /* El marco del rompecabezas */
+        #tablero-puzzle {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+            grid-template-rows: repeat(3, 100px);  /* 3 filas de 100px de alto */
+            gap: 2px;
+            max-width: 300px;
+            margin: 0 auto;
+            background-color: var(--diaguita-rojo-oscuro);
+            padding: 4px;
+            border-radius: 8px;
+        }
+        
+        /* Cada pieza del puzzle */
+        .pieza {
+            background-color: var(--diaguita-crema);
+            color: var(--diaguita-negro);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: bold;
+            cursor: pointer;
+            user-select: none;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+        
+        /* Efecto al seleccionar la primera pieza */
+        .pieza.seleccionada {
+            background-color: var(--diaguita-rojo);
+            color: white;
+            transform: scale(0.95);
+            border: 2px dashed white;
+        }
+
+        /* Cuando la pieza está en su lugar correcto (opcional para ayudar al jugador) */
+        .pieza.correcta {
+            background-color: #e2e8f0; /* Un gris muy sutil */
+        }
+    </style>
+</head>
+<body class="bg-diaguita-light">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-diaguita-primary">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">🏺 Diaguitas Ancestrales</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="memorice.html">Memorice</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sopa-letras.html">Sopa de Letras</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="rompecabezas.html">Rompecabezas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="trivia.html">Trivia</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6 text-center">
+                <div class="card shadow border-0 p-4">
+                    <h2 class="text-diaguita-primary mb-3">Restaura la Cerámica</h2>
+                    <p class="text-muted small mb-4">Toca una pieza y luego otra para intercambiarlas de lugar. Ordena los números del 1 al 9.</p>
+                    
+                    <div class="d-flex justify-content-between align-items-center mb-3 px-3">
+                        <span class="fw-bold text-muted">Movimientos: <span id="movimientos-puzzle">0</span></span>
+                        <button id="btn-mezclar" class="btn btn-sm btn-outline-secondary">Mezclar Piezas</button>
+                    </div>
+
+                    <div id="tablero-puzzle" class="mb-4">
+                        </div>
+
+                    <div id="mensaje-exito-puzzle" class="alert alert-success d-none" role="alert">
+                        <strong>¡Vasija restaurada!</strong> Has demostrado una gran habilidad.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/rompecabezas.js"></script>
+</body>
+</html>
