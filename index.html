@@ -13,6 +13,8 @@
 
 <body>
 
+    <div id="top-target"></div>
+
     <nav class="navbar navbar-expand-lg fixed-top shadow-sm bg-white">
         <div class="container">
             <a class="navbar-brand fw-bold lh-1 text-diaguita-dark py-0" href="index.html">
@@ -27,7 +29,48 @@
                     <li class="nav-item"><a class="nav-link px-3" href="#inicio">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link px-3" href="#nosotros">Nosotros</a></li>
                     <li class="nav-item"><a class="nav-link px-3" href="#guias">Guías Educativas</a></li>
-                    <li class="nav-item"><a class="nav-link px-3" href="#juegos">Juegos</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownJuegos" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Juegos
+                        </a>
+                        <ul class="dropdown-menu border-0 shadow-lg rounded-3 mt-2"
+                            aria-labelledby="navbarDropdownJuegos">
+
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center py-2" href="#juegos">
+                                    <img src="assets/icon/memorice.png" alt="Memorice"
+                                        class="diaguita-dropdown-icon me-2">
+                                    Memorice Ancestral
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center py-2" href="#juegos">
+                                    <img src="assets/icon/sopa.png" alt="Sopa"
+                                        class="diaguita-dropdown-icon me-2">
+                                    Kakán de Letras
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center py-2" href="#juegos">
+                                    <img src="assets/icon/puzzle.png" alt="Puzzle"
+                                        class="diaguita-dropdown-icon me-2">
+                                    Fragmentos Legendarios
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center py-2" href="#juegos">
+                                    <img src="assets/icon/trivia.png" alt="Trivia"
+                                        class="diaguita-dropdown-icon me-2">
+                                    Trivia Diaguita
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
                     <li class="nav-item"><a class="nav-link px-3" href="#contacto">Contacto</a></li>
                 </ul>
                 <a href="#juegos" class="btn btn-diaguita rounded-pill px-4">¡A Jugar!</a>
@@ -157,7 +200,7 @@
             <div class="row align-items-center">
 
                 <div class="col-lg-6 mb-5 mb-lg-0">
-                    <h6 class="text-diaguita-primary fw-bold text-uppercase mb-2">Área Educativa</h6>
+                    <h6 class="text-diaguita-primary fw-bold text-uppercase mb-2">Guías educativas</h6>
                     <h2 class="display-6 fw-bold text-diaguita-dark mb-4">Potencia tus clases con el Kit Docente</h2>
                     <p class="text-muted mb-4">
                         Hemos diseñado una metodología de transferencia cultural que traduce la cosmovisión diaguita al
@@ -212,226 +255,253 @@
         </div>
     </section>
 
+
     <section id="juegos" class="py-5 bg-white">
         <div class="container py-5">
             <div class="text-center mb-5">
-                <h6 class="text-diaguita-primary fw-bold text-uppercase mb-2" style="letter-spacing: 2px;">Juegos
-                    interactivos</h6>
-                <h2 class="display-5 fw-bold text-diaguita-dark">Explora y Aprende Jugando</h2>
-                <p class="text-muted mx-auto" style="max-width: 600px;">Desafía tus conocimientos y descubre el de nuestra cultura a través de estas experiencias diseñadas para fortalecer nuestra identidad.</p>
+                <h6 class="text-diaguita-primary fw-bold text-uppercase mb-2"
+                    style="letter-spacing: 2px; color: #C73E3F !important;">Juegos interactivos</h6>
+                <h2 class="display-5 fw-bold text-diaguita-dark mb-3">Explora y Aprende Jugando</h2>
+                <p class="text-muted mx-auto" style="max-width: 600px;">
+                    Desafía tus conocimientos y descubre el valor de la cultura Diaguita a través de estas experiencias
+                    diseñadas para fortalecer nuestra identidad.
+                </p>
             </div>
 
             <div class="row g-4">
+
                 <div class="col-md-6 col-lg-3">
-                    <div class="card h-100 border-0 shadow-sm text-center p-4 game-card">
-                        <div class="icon-box bg-diaguita-crema text-diaguita-primary rounded-circle mx-auto mb-4 d-flex align-items-center justify-content-center"
-                            style="width: 80px; height: 80px;">
-                            <i class="bi bi-grid-3x3-gap-fill fs-1"></i>
+                    <div class="card h-100 border-0 shadow-sm rounded-4 game-card">
+                        <div class="card-body p-4 text-center d-flex flex-column align-items-center">
+                            <div class="game-icon-box icon-memorice">
+                                <img src="assets/icon/memorice.png" alt="Icono Memorice" class="diaguita-icon-img">
+                            </div>
+                            <h5 class="fw-bold text-diaguita-dark mb-2">Memorice Ancestral</h5>
+                            <p class="text-muted small flex-grow-1">Encuentra los pares de la iconografía diaguita y
+                                entrena tu memoria visual.</p>
+                            <a href="#" class="btn btn-jugar-diaguita rounded-pill px-4 mt-3">Jugar ahora</a>
                         </div>
-                        <h5 class="fw-bold mb-3">Memorice</h5>
-                        <p class="text-muted small mb-4">Aliquam eleifend mi in nulla posuere sollicitudin.</p>
-                        <a href="memorice.html" class="btn btn-outline-danger rounded-pill mt-auto fw-bold">Jugar <i
-                                class="bi bi-arrow-right ms-1"></i></a>
                     </div>
                 </div>
 
                 <div class="col-md-6 col-lg-3">
-                    <div class="card h-100 border-0 shadow-sm text-center p-4 game-card">
-                        <div class="icon-box bg-diaguita-crema text-diaguita-primary rounded-circle mx-auto mb-4 d-flex align-items-center justify-content-center"
-                            style="width: 80px; height: 80px;">
-                            <i class="bi bi-spellcheck fs-1"></i>
+                    <div class="card h-100 border-0 shadow-sm rounded-4 game-card">
+                        <div class="card-body p-4 text-center d-flex flex-column align-items-center">
+                            <div class="game-icon-box icon-sopa">
+                                <img src="assets/icon/sopa.png" alt="Icono Sopa" class="diaguita-icon-img">
+                            </div>
+                            <h5 class="fw-bold text-diaguita-dark mb-2">Kakán de Letras</h5>
+                            <p class="text-muted small flex-grow-1">Busca palabras clave sobre nuestra cosmovisión
+                                Diaguita.</p>
+                            <a href="#" class="btn btn-jugar-diaguita rounded-pill px-4 mt-3">Jugar ahora</a>
                         </div>
-                        <h5 class="fw-bold mb-3">Sopa de Letras</h5>
-                        <p class="text-muted small mb-4">Tempus quam pellentesque nec nam aliquam sem.</p>
-                        <a href="sopa-letras.html" class="btn btn-outline-danger rounded-pill mt-auto fw-bold">Jugar <i
-                                class="bi bi-arrow-right ms-1"></i></a>
                     </div>
                 </div>
 
                 <div class="col-md-6 col-lg-3">
-                    <div class="card h-100 border-0 shadow-sm text-center p-4 game-card">
-                        <div class="icon-box bg-diaguita-crema text-diaguita-primary rounded-circle mx-auto mb-4 d-flex align-items-center justify-content-center"
-                            style="width: 80px; height: 80px;">
-                            <i class="bi bi-puzzle-fill fs-1"></i>
+                    <div class="card h-100 border-0 shadow-sm rounded-4 game-card">
+                        <div class="card-body p-4 text-center d-flex flex-column align-items-center">
+                            <div class="game-icon-box icon-rompecabezas">
+                                <img src="assets/icon/puzzle.png" alt="Icono Rompecabezas" class="diaguita-icon-img">
+                            </div>
+                            <h5 class="fw-bold text-diaguita-dark mb-2">Fragmentos Legendarios</h5>
+                            <p class="text-muted small flex-grow-1">Rearma las vasijas arqueológicas más
+                                emblemáticas de la zona.</p>
+                            <a href="#" class="btn btn-jugar-diaguita rounded-pill px-4 mt-3">Jugar ahora</a>
                         </div>
-                        <h5 class="fw-bold mb-3">Rompecabezas</h5>
-                        <p class="text-muted small mb-4">Perspiciatis quod quo quos nulla quo illum ullam.</p>
-                        <a href="rompecabezas.html" class="btn btn-outline-danger rounded-pill mt-auto fw-bold">Jugar <i
-                                class="bi bi-arrow-right ms-1"></i></a>
                     </div>
                 </div>
 
                 <div class="col-md-6 col-lg-3">
-                    <div class="card h-100 border-0 shadow-sm text-center p-4 game-card">
-                        <div class="icon-box bg-diaguita-crema text-diaguita-primary rounded-circle mx-auto mb-4 d-flex align-items-center justify-content-center"
-                            style="width: 80px; height: 80px;">
-                            <i class="bi bi-question-circle-fill fs-1"></i>
+                    <div class="card h-100 border-0 shadow-sm rounded-4 game-card">
+                        <div class="card-body p-4 text-center d-flex flex-column align-items-center">
+                            <div class="game-icon-box icon-trivia">
+                                <img src="assets/icon/trivia.png" alt="Icono Trivia" class="diaguita-icon-img">
+                            </div>
+                            <h5 class="fw-bold text-diaguita-dark mb-2">Trivia Diaguita</h5>
+                            <p class="text-muted small flex-grow-1">¿Cuánto sabes realmente de tus raíces? Pon a prueba
+                                tus conocimientos.</p>
+                            <a href="#" class="btn btn-jugar-diaguita rounded-pill px-4 mt-3">Jugar ahora</a>
                         </div>
-                        <h5 class="fw-bold mb-3">Trivia Ancestral</h5>
-                        <p class="text-muted small mb-4">Dolor sit amet consectetur adipiscing elit pellentesque.</p>
-                        <a href="trivia.html" class="btn btn-outline-danger rounded-pill mt-auto fw-bold">Jugar <i
-                                class="bi bi-arrow-right ms-1"></i></a>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
     <section id="contacto" class="py-5 bg-diaguita-crema">
         <div class="container py-5">
-            <div class="text-center mb-5">
-                <h6 class="text-diaguita-primary fw-bold text-uppercase mb-2" style="letter-spacing: 2px;">Contact</h6>
-                <h2 class="display-5 fw-bold text-diaguita-dark mb-3">Get In Touch</h2>
-                <p class="text-muted mx-auto" style="max-width: 600px;">Necessitatibus eius consequatur ex aliquid fuga
-                    eum quidem sint consectetur velit</p>
-            </div>
+            <div class="row g-5">
 
-            <div class="row g-4">
                 <div class="col-lg-5">
-                    <div class="bg-white p-4 p-md-5 rounded-4 shadow-sm h-100 border-0">
-                        <h4 class="fw-bold mb-4 text-diaguita-dark">Contact Info</h4>
-                        <p class="text-muted mb-5">Praesent sapien massa, convallis a pellentesque nec, egestas non
-                            nisi. Vestibulum ante ipsum primis.</p>
+                    <h6 class="text-diaguita-primary fw-bold text-uppercase mb-2" style="color: #C73E3F !important;">
+                        Contacto Directo</h6>
+                    <h2 class="display-6 fw-bold text-diaguita-dark mb-4">¿Tienes dudas sobre el material?</h2>
+                    <p class="text-muted mb-5">
+                        Estamos aquí para apoyarte. Si eres docente y necesitas ayuda con las guías, o si tienes dudas
+                        sobre cómo implementar los juegos en tu aula, escríbenos y te responderemos a la brevedad.
+                    </p>
 
-                        <div class="d-flex align-items-start mb-4">
-                            <div class="bg-light text-diaguita-primary p-3 rounded-circle me-3 d-flex align-items-center justify-content-center"
-                                style="width: 50px; height: 50px;">
-                                <i class="bi bi-geo-alt-fill fs-5"></i>
-                            </div>
-                            <div>
-                                <h6 class="fw-bold mb-1 text-diaguita-dark">Our Location</h6>
-                                <p class="text-muted mb-0 small">A108 Adam Street<br>New York, NY 535022</p>
-                            </div>
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="bg-white shadow-sm rounded-circle d-flex align-items-center justify-content-center"
+                            style="width: 50px; height: 50px; color: #C73E3F;">
+                            <i class="bi bi-envelope-fill fs-5"></i>
                         </div>
-
-                        <div class="d-flex align-items-start mb-4">
-                            <div class="bg-light text-diaguita-primary p-3 rounded-circle me-3 d-flex align-items-center justify-content-center"
-                                style="width: 50px; height: 50px;">
-                                <i class="bi bi-telephone-fill fs-5"></i>
-                            </div>
-                            <div>
-                                <h6 class="fw-bold mb-1 text-diaguita-dark">Call Us</h6>
-                                <p class="text-muted mb-0 small">+1 5589 55488 55</p>
-                            </div>
+                        <div class="ms-3">
+                            <h6 class="mb-0 fw-bold">Correo Electrónico</h6>
+                            <p class="text-muted mb-0">hola@diaguitasancestrales.cl</p>
                         </div>
+                    </div>
 
-                        <div class="d-flex align-items-start">
-                            <div class="bg-light text-diaguita-primary p-3 rounded-circle me-3 d-flex align-items-center justify-content-center"
-                                style="width: 50px; height: 50px;">
-                                <i class="bi bi-envelope-fill fs-5"></i>
-                            </div>
-                            <div>
-                                <h6 class="fw-bold mb-1 text-diaguita-dark">Email Us</h6>
-                                <p class="text-muted mb-0 small">info@example.com</p>
-                            </div>
+                    <div class="d-flex align-items-center">
+                        <div class="bg-white shadow-sm rounded-circle d-flex align-items-center justify-content-center"
+                            style="width: 50px; height: 50px; color: #C73E3F;">
+                            <i class="bi bi-geo-alt-fill fs-5"></i>
+                        </div>
+                        <div class="ms-3">
+                            <h6 class="mb-0 fw-bold">Ubicación</h6>
+                            <p class="text-muted mb-0">La Serena, Región de Coquimbo - Chile</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-7">
-                    <div class="bg-white p-4 p-md-5 rounded-4 shadow-sm h-100 border-0">
-                        <form>
-                            <div class="row g-4">
+                    <div class="bg-white p-4 p-md-5 rounded-4 shadow-sm">
+                        <form action="#" method="POST">
+                            <div class="row g-3">
                                 <div class="col-md-6">
-                                    <input type="text" class="form-control form-control-lg bg-light border-0 px-4"
-                                        placeholder="Your Name" required>
+                                    <label class="form-label small fw-bold">Nombre</label>
+                                    <input type="text" class="form-control border-0 bg-light rounded-3 p-3"
+                                        placeholder="Tu nombre">
                                 </div>
                                 <div class="col-md-6">
-                                    <input type="email" class="form-control form-control-lg bg-light border-0 px-4"
-                                        placeholder="Your Email" required>
+                                    <label class="form-label small fw-bold">Correo</label>
+                                    <input type="email" class="form-control border-0 bg-light rounded-3 p-3"
+                                        placeholder="tu@email.com">
                                 </div>
                                 <div class="col-12">
-                                    <input type="text" class="form-control form-control-lg bg-light border-0 px-4"
-                                        placeholder="Subject" required>
+                                    <label class="form-label small fw-bold">Asunto de la consulta</label>
+                                    <select class="form-select border-0 bg-light rounded-3 p-3">
+                                        <option selected disabled>Selecciona una opción</option>
+                                        <option>Duda sobre Guías Pedagógicas</option>
+                                        <option>Problema técnico con los Juegos</option>
+                                        <option>Consulta General</option>
+                                    </select>
                                 </div>
                                 <div class="col-12">
-                                    <textarea class="form-control form-control-lg bg-light border-0 px-4 py-3" rows="5"
-                                        placeholder="Message" required></textarea>
+                                    <label class="form-label small fw-bold">Mensaje</label>
+                                    <textarea class="form-control border-0 bg-light rounded-3 p-3" rows="4"
+                                        placeholder="¿En qué podemos ayudarte?"></textarea>
                                 </div>
-                                <div class="col-12 text-center mt-4">
-                                    <button type="submit" class="btn btn-diaguita btn-lg rounded-pill px-5">Send
-                                        Message</button>
+                                <div class="col-12 mt-4">
+                                    <button type="submit"
+                                        class="btn btn-jugar-diaguita rounded-pill w-100 py-3 fw-bold">
+                                        Enviar Consulta <i class="bi bi-send ms-2"></i>
+                                    </button>
                                 </div>
                             </div>
                         </form>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <footer class="bg-white pt-5 pb-3">
-        <div class="container pt-4">
-            <div class="row g-4 mb-5">
-                <div class="col-lg-4 pe-lg-5">
-                    <a class="navbar-brand fw-bold lh-1 text-diaguita-dark py-0 d-inline-block mb-4" href="index.html">
-                        DIAGUITAS<br>
-                        <span class="text-diaguita-primary fs-6 fw-normal"
-                            style="letter-spacing: 2px;">ANCESTRALES</span>
-                    </a>
-                    <p class="text-muted small mb-3">A108 Adam Street<br>New York, NY 535022</p>
-                    <p class="text-muted small mb-1"><strong>Phone:</strong> +1 5589 55488 55</p>
-                    <p class="text-muted small mb-4"><strong>Email:</strong> info@example.com</p>
+    <footer class="footer py-5 bg-white border-top">
+        <div class="container">
+            <div class="row g-4 justify-content-between">
 
-                    <div class="d-flex gap-2">
-                        <a href="#"
-                            class="btn btn-light rounded-circle text-muted d-flex align-items-center justify-content-center"
-                            style="width: 40px; height: 40px;"><i class="bi bi-twitter-x"></i></a>
-                        <a href="#"
-                            class="btn btn-light rounded-circle text-muted d-flex align-items-center justify-content-center"
-                            style="width: 40px; height: 40px;"><i class="bi bi-facebook"></i></a>
-                        <a href="#"
-                            class="btn btn-light rounded-circle text-muted d-flex align-items-center justify-content-center"
-                            style="width: 40px; height: 40px;"><i class="bi bi-instagram"></i></a>
-                        <a href="#"
-                            class="btn btn-light rounded-circle text-muted d-flex align-items-center justify-content-center"
-                            style="width: 40px; height: 40px;"><i class="bi bi-linkedin"></i></a>
+                <div class="col-lg-4">
+                    <h4 class="fw-bold mb-3" style="color: #C73E3F;">Diaguitas Ancestrales</h4>
+                    <p class="text-muted small pe-lg-5">
+                        Recursos pedagógicos digitales para la valoración y difusión de la cultura diaguita en la Región
+                        de Coquimbo.
+                    </p>
+                    <div class="d-flex gap-2 mt-4">
+                        <a href="#" class="btn-social-white"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="btn-social-white"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="btn-social-white"><i class="bi bi-youtube"></i></a>
                     </div>
                 </div>
 
-                <div class="col-lg-2 col-6">
-                    <h6 class="fw-bold text-diaguita-dark mb-4">Useful Links</h6>
-                    <ul class="list-unstyled mb-0">
-                        <li class="mb-3"><a href="#inicio" class="text-muted text-decoration-none footer-link">Home</a>
-                        </li>
-                        <li class="mb-3"><a href="#nosotros" class="text-muted text-decoration-none footer-link">About
-                                us</a></li>
-                        <li class="mb-3"><a href="#juegos"
-                                class="text-muted text-decoration-none footer-link">Services</a></li>
-                        <li class="mb-3"><a href="#" class="text-muted text-decoration-none footer-link">Terms of
-                                service</a></li>
-                        <li class="mb-3"><a href="#" class="text-muted text-decoration-none footer-link">Privacy
-                                policy</a></li>
+                <div class="col-6 col-lg-2">
+                    <h6 class="fw-bold text-dark text-uppercase mb-3" style="font-size: 0.75rem; letter-spacing: 1px;">
+                        Sitio</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#inicio" class="nav-link-footer">Inicio</a></li>
+                        <li class="mb-2"><a href="#nosotros" class="nav-link-footer">Nosotros</a></li>
+                        <li class="mb-2"><a href="#guias" class="nav-link-footer">Guías Educativas</a></li>
+                        <li class="mb-2"><a href="#contacto" class="nav-link-footer">Contacto</a></li>
                     </ul>
                 </div>
 
-                <div class="col-lg-2 col-6">
-                    <h6 class="fw-bold text-diaguita-dark mb-4">Our Services</h6>
-                    <ul class="list-unstyled mb-0">
-                        <li class="mb-3"><a href="memorice.html"
-                                class="text-muted text-decoration-none footer-link">Memorice</a></li>
-                        <li class="mb-3"><a href="sopa-letras.html"
-                                class="text-muted text-decoration-none footer-link">Sopa de Letras</a></li>
-                        <li class="mb-3"><a href="rompecabezas.html"
-                                class="text-muted text-decoration-none footer-link">Rompecabezas</a></li>
-                        <li class="mb-3"><a href="trivia.html"
-                                class="text-muted text-decoration-none footer-link">Trivia</a></li>
-                        <li class="mb-3"><a href="#guias" class="text-muted text-decoration-none footer-link">Guías
-                                Docentes</a></li>
-                    </ul>
+                <div class="col-6 col-lg-3">
+                    <h6 class="fw-bold text-dark text-uppercase mb-3" style="font-size: 0.75rem; letter-spacing: 1px;">
+                        Juegos</h6>
+                    <div class="d-flex flex-wrap gap-2">
+                        <a href="#juegos" class="footer-game-link" title="Memorice">
+                            <img src="assets/icon/memorice.png" alt="Memorice">
+                        </a>
+                        <a href="#juegos" class="footer-game-link" title="Sopa de Letras">
+                            <img src="assets/icon/sopa.png" alt="Sopa">
+                        </a>
+                        <a href="#juegos" class="footer-game-link" title="Puzzle">
+                            <img src="assets/icon/puzzle.png" alt="Puzzle">
+                        </a>
+                        <a href="#juegos" class="footer-game-link" title="Trivia">
+                            <img src="assets/icon/trivia.png" alt="Trivia">
+                        </a>
+                    </div>
                 </div>
 
-                <div class="col-lg-4">
-                    <h6 class="fw-bold text-diaguita-dark mb-4">Hic solutasetp</h6>
-                    <p class="text-muted small">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
-                        consectetur velit.</p>
+                <div class="col-lg-2">
+                    <h6 class="fw-bold text-dark text-uppercase mb-3" style="font-size: 0.75rem; letter-spacing: 1px;">
+                        Territorio</h6>
+                    <p class="small text-muted">
+                        <i class="bi bi-geo-alt-fill me-1" style="color: #C73E3F;"></i> La Serena, Chile.
+                    </p>
                 </div>
             </div>
 
-            <div class="text-center border-top pt-4 mt-4">
-                <p class="text-muted small mb-0">
-                    © Copyright <strong>Diaguitas Ancestrales</strong>. Todos los derechos reservados.
-                </p>
+            <hr class="my-4 opacity-10">
+
+            <div class="text-center">
+                <p class="small text-muted mb-0">© 2026 Diaguitas Ancestrales. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
+
+    <a href="#top-target" id="backToTop" class="back-to-top shadow d-flex align-items-center justify-content-center">
+        <i class="bi bi-arrow-up fs-5"></i>
+    </a>
+
+    <script>
+        // Esperamos a que todo el contenido cargue
+        document.addEventListener('DOMContentLoaded', () => {
+            const backToTopButton = document.getElementById('backToTop');
+
+            window.addEventListener('scroll', () => {
+                // Si bajamos más de 400px, aparece. Si no, se oculta.
+                if (window.scrollY > 400) {
+                    backToTopButton.classList.add('show');
+                } else {
+                    backToTopButton.classList.remove('show');
+                }
+            });
+
+            // Al hacer clic, sube suavemente (por si el CSS smooth no carga)
+            backToTopButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>

@@ -479,3 +479,445 @@ h1, h2, h3, h4, h5, .navbar-brand {
     background-color: var(--diaguita-rojo-original);
     color: white;
 }
+
+/* =========================================
+   --- SOLUCIÓN FINAL: ICONOS VISIBLES Y ROJOS ---
+   ========================================= */
+
+/* 1. CONTENEDOR (Círculo) */
+.game-icon-box {
+    width: 100px;
+    height: 100px;
+    background-color: rgba(199, 62, 63, 0.05); /* Fondo casi invisible */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 20px;
+}
+
+/* 2. EL ICONO (Tamaño 65px y Color #C73E3F) */
+.diaguita-icon-img {
+    width: 65px !important; /* Tamaño grande pedido */
+    height: 65px !important;
+    opacity: 1 !important;  /* Aseguramos que sea visible */
+    object-fit: contain;
+    transition: all 0.3s ease-in-out;
+
+    /* EL TRUCO: Primero lo volvemos negro (brightness 0) y luego aplicamos el rojo exacto */
+    filter: brightness(0) saturate(100%) invert(31%) sepia(61%) saturate(2323%) hue-rotate(334deg) brightness(86%) contrast(93%) !important;
+}
+
+/* 3. HOVER DE LA TARJETA */
+.game-card:hover .game-icon-box {
+    background-color: #C73E3F !important; /* Fondo rojo oficial */
+}
+
+.game-card:hover .diaguita-icon-img {
+    /* En el hover, el icono se vuelve BLANCO puro y se agranda */
+    filter: brightness(0) invert(1) !important;
+    transform: scale(1.15) !important;
+}
+
+/* 4. BOTONES "JUGAR AHORA" (Mantenemos tu hover perfecto) */
+.btn-jugar-diaguita {
+    background-color: transparent !important;
+    color: #C73E3F !important;
+    border: 2px solid #C73E3F !important;
+    font-weight: 600 !important;
+    transition: all 0.3s ease-in-out !important;
+}
+
+.btn-jugar-diaguita:hover {
+    background-color: #C73E3F !important;
+    color: #ffffff !important;
+    border-color: #C73E3F !important;
+}
+
+/* Estilo base de la Card */
+.game-card {
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+    border: 1px solid rgba(0,0,0,0.05) !important;
+}
+
+/* =========================================
+   --- ESTILOS PÁGINA 5: CONTACTO ---
+   ========================================= */
+
+/* Estilo de los campos de entrada */
+#contacto .form-control, 
+#contacto .form-select {
+    border: 1px solid transparent !important;
+    transition: all 0.3s ease;
+}
+
+/* Efecto cuando el usuario hace clic para escribir */
+#contacto .form-control:focus, 
+#contacto .form-select:focus {
+    background-color: #ffffff !important;
+    border-color: #C73E3F !important;
+    box-shadow: 0 0 0 4px rgba(199, 62, 63, 0.1) !important;
+    outline: none;
+}
+
+/* Reutilizamos y blindamos el botón con tu estilo favorito */
+#contacto .btn-jugar-diaguita {
+    background-color: transparent !important;
+    color: #C73E3F !important;
+    border: 2px solid #C73E3F !important;
+    transition: all 0.3s ease-in-out !important;
+}
+
+#contacto .btn-jugar-diaguita:hover {
+    background-color: #C73E3F !important;
+    color: #ffffff !important;
+}
+
+/* Iconos de contacto con sombra suave */
+#contacto .bg-white.shadow-sm {
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+/* =========================================
+   --- ESTILOS FOOTER BLANCO ---
+   ========================================= */
+
+.footer {
+    border-top: 1px solid rgba(0,0,0,0.05) !important;
+}
+
+/* Enlaces simples */
+.nav-link-footer {
+    color: #6c757d;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link-footer:hover {
+    color: #C73E3F !important;
+}
+
+/* Iconos sociales circulares en blanco */
+.btn-social-white {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #f8f9fa;
+    color: #495057;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.btn-social-white:hover {
+    background-color: #C73E3F;
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(199, 62, 63, 0.2);
+}
+
+/* Estilo para los logos */
+.footer .border {
+    border-color: rgba(0,0,0,0.08) !important;
+}
+
+/* --- ESTILOS FOOTER CORREGIDOS --- */
+
+.nav-link-footer {
+    color: #6c757d;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.nav-link-footer:hover {
+    color: #C73E3F !important;
+    padding-left: 4px;
+}
+
+/* Iconos de juegos en el footer */
+.footer-game-link {
+    width: 40px;
+    height: 40px;
+    background-color: #f8f9fa;
+    border: 1px solid rgba(0,0,0,0.05);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.footer-game-link img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    /* Mismo filtro rojo #C73E3F que usamos arriba */
+    filter: brightness(0) saturate(100%) invert(31%) sepia(61%) saturate(2323%) hue-rotate(334deg) brightness(86%) contrast(93%);
+}
+
+.footer-game-link:hover {
+    background-color: #C73E3F;
+    transform: translateY(-3px);
+}
+
+.footer-game-link:hover img {
+    filter: brightness(0) invert(1); /* Se vuelve blanco al pasar el mouse */
+}
+
+/* Redes Sociales */
+.btn-social-white {
+    width: 35px;
+    height: 35px;
+    background-color: #f8f9fa;
+    color: #495057;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: 0.3s;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.btn-social-white:hover {
+    background-color: #C73E3F;
+    color: white;
+}
+
+/* =========================================
+   --- FLECHA DE RETORNO (PALETA DIAGUITA) ---
+   ========================================= */
+
+.back-to-top {
+    position: fixed !important;
+    bottom: 30px !important;  /* Separación exacta de la imagen */
+    right: 30px !important;   /* Separación exacta de la imagen */
+    width: 50px !important;
+    height: 50px !important;
+    z-index: 1000 !important; /* Por encima de todo */
+    border-radius: 50% !important;
+    transition: all 0.3s ease-in-out !important;
+    text-decoration: none !important;
+    cursor: pointer !important;
+
+    /* OCULTA POR DEFECTO (JavaScript la activará) */
+    opacity: 0;
+    visibility: hidden;
+
+    /* COLORES DE PALETA (Fondo Rojo, Icono Blanco Base) */
+    background-color: #C73E3F !important;
+    color: #ffffff !important;
+    border: 2px solid #C73E3F !important;
+
+    /* Animación de pulso Diaguita (Rojo sutil) */
+    animation: top-pulse-red 2s infinite;
+}
+
+/* EFECTO HOVER */
+.back-to-top:hover {
+    transform: translateY(-5px) scale(1.05) !important; /* Se eleva y agranda */
+    
+    /* INVERSIÓN DE COLOR (Fondo Blanco, Icono Rojo) */
+    background-color: #ffffff !important;
+    color: #C73E3F !important;
+    border-color: #C73E3F !important;
+    box-shadow: 0 10px 20px rgba(199, 62, 63, 0.3) !important;
+}
+
+/* CLASE QUE JS ACTIVARÁ PARA MOSTRAR LA FLECHA */
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Animación de Pulso Roja sutil */
+@keyframes top-pulse-red {
+    0% { box-shadow: 0 0 0 0 rgba(199, 62, 63, 0.6); }
+    70% { box-shadow: 0 0 0 10px rgba(199, 62, 63, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(199, 62, 63, 0); }
+}
+
+/* Opcional: Asegurar scroll suavizado para todo el sitio */
+html {
+    scroll-behavior: smooth;
+}
+
+/* =========================================
+   --- SOLUCIÓN SUBMENÚ JUEGOS: CORRECCIÓN ---
+   --- COLOR EXACTO Y ALINEACIÓN ---
+   ========================================= */
+
+/* Contenedor del Dropdown (Submenú) */
+.navbar .dropdown-menu {
+    border: 1px solid rgba(0,0,0,0.05) !important;
+    padding: 8px 0 !important; /* Espaciado superior e inferior limpio */
+    animation: fadeInDownDropdown 0.3s ease-out;
+}
+
+/* ESTILO DE LOS ÍCONOS PERSONALIZADOS (Color #C73E3F sólido) */
+.diaguita-dropdown-icon {
+    width: 22px !important; /* Tamaño pequeño adecuado para el menú */
+    height: 22px !important;
+    object-fit: contain;
+    transition: all 0.2s ease-in-out !important;
+    
+    /* Filtro Rojo Diaguita Sólido #C73E3F (Usando Black Start para evitar rosado) */
+    filter: brightness(0) saturate(100%) invert(31%) sepia(61%) saturate(2323%) hue-rotate(334deg) brightness(86%) contrast(93%) !important;
+}
+
+/* Enlaces del submenú (dropdown-item) */
+.dropdown-item {
+    color: #495057 !important;
+    font-size: 0.9rem !important;
+    transition: all 0.2s ease-in-out !important;
+    border-radius: 6px !important; /* Pequeño radio para el hover */
+    margin: 0 8px !important;     /* Separación del borde del menú */
+    width: calc(100% - 16px) !important; /* Ajuste del ancho para el margen */
+    padding: 8px 12px !important; /* Espaciado interno perfecto */
+}
+
+/* HOVER DEL SUBMENÚ (Fondo Rojo Oficial, Texto e Ícono Blancos) */
+.dropdown-item:hover,
+.dropdown-item:focus {
+    background-color: #C73E3F !important;
+    color: #ffffff !important;
+}
+
+/* Forzamos que el ÍCONO se vuelva blanco en hover */
+.dropdown-item:hover .diaguita-dropdown-icon {
+    filter: brightness(0) invert(1) !important;
+}
+
+/* Flechita del dropdown en color rojo oficial */
+.navbar .dropdown-toggle::after {
+    color: #C73E3F !important;
+    vertical-align: middle !important;
+    margin-left: 6px !important;
+}
+
+/* Animación de aparición suave */
+@keyframes fadeInDownDropdown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Opcional: Desplegar al pasar el mouse en PC */
+@media (min-width: 992px) {
+    .nav-item.dropdown:hover .dropdown-menu {
+        display: block;
+    }
+}
+
+/* =========================================
+   --- FIJAR SUBMENÚ Y EVITAR CIERRE ---
+   ========================================= */
+
+@media (min-width: 992px) {
+    /* 1. Asegurar que el menú se mantenga abierto al hover del padre */
+    .nav-item.dropdown:hover .dropdown-menu {
+        display: block !important;
+        margin-top: 0 !important; /* Pegamos el menú al nav para evitar el hueco */
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* 2. EL TRUCO DEL PUENTE: Crea un área invisible para que el mouse 
+       no "se pierda" al bajar hacia los juegos */
+    .dropdown-menu::before {
+        content: "";
+        position: absolute;
+        top: -15px; /* Cubre el espacio de separación */
+        left: 0;
+        width: 100%;
+        height: 15px;
+        display: block;
+        background: transparent;
+    }
+}
+
+/* Estilo adicional para que el menú no se vea tan pegado al texto */
+.navbar .dropdown-menu {
+    top: 100% !important;
+    padding: 10px 0 !important;
+    border: 1px solid rgba(0,0,0,0.08) !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important;
+}
+
+/* Mantener el diseño de los items que ya teníamos */
+.dropdown-item {
+    padding: 10px 20px !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+/* =========================================
+   --- ELIMINACIÓN TOTAL DE LÍNEAS EN JUEGOS ---
+   ========================================= */
+
+/* 1. Reset total del enlace "Juegos" */
+.navbar-nav .nav-item.dropdown .nav-link {
+    text-decoration: none !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    background-image: none !important; /* A veces Bootstrap usa gradientes */
+}
+
+/* 2. Neutralizar estados de Focus, Active y Hover */
+.navbar-nav .nav-item.dropdown .nav-link:focus,
+.navbar-nav .nav-item.dropdown .nav-link:active,
+.navbar-nav .nav-item.dropdown .nav-link:hover,
+.navbar-nav .nav-item.dropdown.show .nav-link {
+    text-decoration: none !important;
+    border-bottom: 0 !important;
+    outline: 0 !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
+}
+
+/* 3. COMPORTAMIENTO HOVER LIMPIO (PC) */
+@media (min-width: 992px) {
+    .nav-item.dropdown .dropdown-menu {
+        display: none;
+        margin-top: 0 !important;
+        opacity: 0;
+        visibility: hidden;
+        border-top: none !important; /* Evita que el borde del menú parezca una raya */
+    }
+
+    .nav-item.dropdown:hover .dropdown-menu {
+        display: block !important;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* Puente invisible para conexión fluida */
+    .nav-item.dropdown::after {
+        content: "";
+        position: absolute;
+        bottom: -15px;
+        left: 0;
+        width: 100%;
+        height: 15px;
+        background: transparent;
+    }
+}
+
+/* 4. Asegurar que el menú desplegable no tenga bordes superiores molestos */
+.dropdown-menu {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+    margin-top: 0 !important;
+}
