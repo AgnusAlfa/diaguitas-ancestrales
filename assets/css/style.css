@@ -164,3 +164,318 @@ h1, h2, h3, h4, h5, .navbar-brand {
     padding-left: 5px; /* Pequeño salto a la derecha al pasar el mouse */
 }
 
+/* Ajuste para que la imagen se comporte como un icono pequeño */
+.hero-badge-icon {
+    width: 22px;               /* Tamaño similar al de las estrellas */
+    height: 22px;
+    object-fit: contain;       /* Evita que se deforme */
+    display: inline-block;
+    vertical-align: middle;    /* La centra perfectamente con el texto */
+    margin-top: -2px;          /* Ajuste fino de posición */
+}
+
+/* --- CONTENEDOR PRINCIPAL --- */
+.hero-images-container {
+    position: relative;
+    padding: 20px;
+}
+
+.main-hero-img {
+    width: 100%;
+    height: auto;
+    border: 8px solid white;
+    border-radius: 20px;
+}
+
+/* --- DETALLE JEROGLÍFICO (Derecha) --- */
+.detail-overlay {
+    position: absolute;
+    bottom: -15px;      /* Sobresale un poco hacia abajo */
+    right: -10px;       /* Sobresale un poco hacia la derecha */
+    width: 180px;       /* Tamaño del detalle */
+    height: 180px;
+    border: 6px solid white;
+    border-radius: 15px;
+    overflow: hidden;
+    z-index: 10;
+    animation: float-detail 5s ease-in-out infinite;
+}
+
+.detail-overlay img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* --- TARJETA INSTAGRAM (Izquierda) --- */
+.stat-card {
+    position: absolute;
+    bottom: 40px;       /* Más arriba para no chocar con el detalle */
+    left: -30px;        /* Sobresale hacia la izquierda */
+    min-width: 240px;
+    z-index: 11;
+    animation: float-instagram 6s ease-in-out infinite;
+}
+
+/* --- ANIMACIONES INDEPENDIENTES --- */
+@keyframes float-detail {
+    0%, 100% { transform: translateY(0) rotate(2deg); }
+    50% { transform: translateY(-12px) rotate(-1deg); }
+}
+
+@keyframes float-instagram {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-18px); }
+}
+
+/* Ajustes Página 2: Nosotros */
+#nosotros .border-end {
+    border-right: 2px solid #dee2e6 !important;
+}
+
+#nosotros .experience-box {
+    min-width: 200px;
+    transform: rotate(-2deg); /* Un toque orgánico */
+    transition: transform 0.3s ease;
+}
+
+#nosotros .experience-box:hover {
+    transform: rotate(0deg) scale(1.05);
+}
+
+/* Color de fondo suave para el perfil del coordinador */
+.rounded-4[style*="background-color"] {
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+/* Transformación del cuadro en Botón Flotante */
+.floating-about-btn {
+    z-index: 10;
+    transition: all 0.3s ease;
+    animation: float-about 6s ease-in-out infinite; /* Movimiento similar al de Instagram */
+}
+
+/* Efecto al pasar el mouse */
+.floating-about-btn:hover {
+    transform: scale(1.05) !important; /* Crece un poquito */
+    filter: brightness(1.1);
+}
+
+/* El círculo blanco del icono */
+.btn-icon-circle {
+    transition: transform 0.3s ease;
+}
+
+.floating-about-btn:hover .btn-icon-circle {
+    transform: rotate(15deg); /* Gira un poco el icono al pasar el mouse */
+}
+
+/* Animación de flotación suave */
+@keyframes float-about {
+    0%, 100% { transform: translateY(0) rotate(-1deg); }
+    50% { transform: translateY(-20px) rotate(1deg); }
+}
+
+/* Ajuste para móviles: que no tape la cara de la foto */
+@media (max-width: 991px) {
+    .floating-about-btn {
+        position: relative !important;
+        display: inline-block;
+        margin: 20px 0 0 0 !important;
+        top: 0 !important;
+        start: 0 !important;
+    }
+}
+
+/* Ajuste de los nuevos íconos de la lista */
+#guias li i {
+    width: 32px;
+    height: 32px;
+    background-color: rgba(168, 70, 50, 0.1); /* Fondo rojo muy suave */
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+#guias li:hover i {
+    background-color: var(--diaguita-rojo-original);
+    color: white !important;
+}
+
+/* Redimensionamiento del botón de descarga */
+.btn-download-optimized {
+    max-width: fit-content;
+    border: 2px solid transparent;
+}
+
+.btn-download-optimized:hover {
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1) !important;
+}
+
+/* Ajuste fino de la tipografía dentro del botón */
+.btn-download-optimized .lh-1 {
+    line-height: 1.2 !important;
+}
+
+/* Estilos para el Mockup de la Guía */
+.guide-mockup-container {
+    position: relative;
+    padding: 30px;
+    perspective: 1200px; /* Crea el efecto de profundidad */
+}
+
+.guide-preview-img {
+    max-width: 80%;
+    height: auto;
+    border: 1px solid rgba(0,0,0,0.05);
+    /* Rotación para dar volumen */
+    transform: rotateY(-8deg) rotateX(2deg);
+    transition: all 0.5s ease;
+    /* Sombra profunda para que "salte" de la pantalla */
+    box-shadow: -25px 25px 50px rgba(0,0,0,0.15) !important;
+}
+
+/* Efecto al pasar el mouse sobre la gráfica */
+.guide-mockup-container:hover .guide-preview-img {
+    transform: rotateY(0deg) rotateX(0deg) scale(1.03);
+    box-shadow: -10px 10px 30px rgba(0,0,0,0.1) !important;
+}
+
+/* Ajuste de iconos de la lista */
+#guias li i {
+    min-width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilo para que el círculo funcione como botón interactivo */
+.floating-download-badge {
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+}
+
+.floating-download-badge:hover {
+    transform: scale(1.15) rotate(15deg); /* Crece y gira un poco */
+    background-color: var(--diaguita-rojo-original) !important;
+    border-color: white !important;
+}
+
+/* Cambia el color del texto dentro del círculo al pasar el mouse */
+.floating-download-badge:hover span {
+    color: white !important;
+}
+
+/* Animación sutil para atraer la atención */
+.floating-download-badge {
+    animation: badge-pulse 3s infinite;
+}
+
+@keyframes badge-pulse {
+    0% { box-shadow: 0 0 0 0 rgba(168, 70, 50, 0.4); }
+    70% { box-shadow: 0 0 0 15px rgba(168, 70, 50, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(168, 70, 50, 0); }
+}
+
+/* --- ESTILO DEFINITIVO PARA EL BOTÓN CIRCULAR --- */
+
+/* 1. Estado Base (Sin pasar el mouse) */
+.floating-download-badge {
+    background-color: #ffffff !important; /* Fondo blanco inicial */
+    border: 2px solid var(--diaguita-rojo-original) !important;
+    transition: all 0.3s ease-in-out !important;
+    text-decoration: none !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 2. Estado HOVER (Cuando pasas el mouse) */
+.floating-download-badge:hover {
+    background-color: #C73E3F !important; /* El rojo que me pediste */
+    border-color: #C73E3F !important;
+    transform: scale(1.1) rotate(10deg);
+    box-shadow: 0 10px 20px rgba(199, 62, 63, 0.4) !important;
+}
+
+/* 3. CONTROL DE LAS LETRAS (Aquí evitamos el blanqueo) */
+/* Forzamos que CUALQUIER texto dentro del círculo sea blanco al hacer hover */
+.floating-download-badge:hover span, 
+.floating-download-badge:hover .text-diaguita-primary, 
+.floating-download-badge:hover .text-dark {
+    color: #ffffff !important;
+}
+
+/* 4. Animación de pulso opcional para llamar la atención */
+.floating-download-badge {
+    animation: badge-pulse-red 3s infinite;
+}
+
+@keyframes badge-pulse-red {
+    0% { box-shadow: 0 0 0 0 rgba(199, 62, 63, 0.4); }
+    70% { box-shadow: 0 0 0 15px rgba(199, 62, 63, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(199, 62, 63, 0); }
+}
+
+/* --- ESTILOS TARJETAS DE JUEGO --- */
+
+.game-card {
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background-color: #ffffff;
+    border: 1px solid rgba(0,0,0,0.05) !important;
+}
+
+.game-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 15px 35px rgba(168, 70, 50, 0.15) !important;
+}
+
+/* Contenedor del icono */
+.game-icon-box {
+    width: 80px;
+    height: 80px;
+    background-color: rgba(168, 70, 50, 0.05); /* Fondo muy suave */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+/* IMAGEN MONOCROMÁTICA (El truco del filtro) */
+.diaguita-icon {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    /* Este filtro convierte cualquier imagen al color Terracota #A84632 */
+    filter: invert(33%) sepia(35%) saturate(1066%) hue-rotate(325deg) brightness(92%) contrast(88%);
+    transition: all 0.3s ease;
+}
+
+/* EFECTO HOVER: Cambia el fondo a rojo y el icono a blanco */
+.game-card:hover .game-icon-box {
+    background-color: var(--diaguita-rojo-original);
+    transform: scale(1.1);
+}
+
+.game-card:hover .diaguita-icon {
+    /* Convierte el icono a blanco puro */
+    filter: brightness(0) invert(1);
+}
+
+.game-card .btn-outline-danger {
+    border-color: var(--diaguita-rojo-original);
+    color: var(--diaguita-rojo-original);
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.game-card .btn-outline-danger:hover {
+    background-color: var(--diaguita-rojo-original);
+    color: white;
+}
