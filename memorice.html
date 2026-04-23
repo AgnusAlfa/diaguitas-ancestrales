@@ -25,14 +25,45 @@
                     <li class="nav-item"><a class="nav-link" href="index.html#nosotros">Nosotros</a></li>
                     <li class="nav-item"><a class="nav-link" href="index.html#guias">Guías Educativas</a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownJuegos" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
                             Juegos
                         </a>
-                        <ul class="dropdown-menu border-0 shadow-lg mt-2">
-                            <li><a class="dropdown-item py-2" href="memorice.html">Memorice Diaguita</a></li>
-                            <li><a class="dropdown-item py-2" href="sopa-letras.html">Sopa de Letras</a></li>
-                            <li><a class="dropdown-item py-2" href="rompecabezas.html">Puzzle Jarro Pato</a></li>
-                            <li><a class="dropdown-item py-2" href="trivia.html">Trivia Diaguita</a></li>
+                        <ul class="dropdown-menu border-0 shadow-lg rounded-3 mt-2"
+                            aria-labelledby="navbarDropdownJuegos">
+
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center py-2" href="memorice.html">
+                                    <img src="assets/icon/memorice.png" alt="Memorice"
+                                        class="diaguita-dropdown-icon me-2">
+                                    Memorice Ancestral
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center py-2" href="javascript:void(0)"
+                                    onclick="avisoPrototipo('Kakán de Letras', 'assets/icon/sopa.png')">
+                                    <img src="assets/icon/sopa.png" alt="Sopa" class="diaguita-dropdown-icon me-2">
+                                    Kakán de Letras
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center py-2" href="javascript:void(0)"
+                                    onclick="avisoPrototipo('Fragmentos Legendarios', 'assets/icon/puzzle.png')">
+                                    <img src="assets/icon/puzzle.png" alt="Puzzle" class="diaguita-dropdown-icon me-2">
+                                    Fragmentos Legendarios
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center py-2" href="javascript:void(0)"
+                                    onclick="avisoPrototipo('Trivia Diaguita', 'assets/icon/trivia.png')">
+                                    <img src="assets/icon/trivia.png" alt="Trivia" class="diaguita-dropdown-icon me-2">
+                                    Trivia Diaguita
+                                </a>
+                            </li>
+
                         </ul>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="index.html#contacto">Contacto</a></li>

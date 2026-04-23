@@ -38,7 +38,7 @@
                             aria-labelledby="navbarDropdownJuegos">
 
                             <li>
-                                <a class="dropdown-item d-flex align-items-center py-2" href="#juegos">
+                                <a class="dropdown-item d-flex align-items-center py-2" href="memorice.html">
                                     <img src="assets/icon/memorice.png" alt="Memorice"
                                         class="diaguita-dropdown-icon me-2">
                                     Memorice Ancestral
@@ -46,25 +46,25 @@
                             </li>
 
                             <li>
-                                <a class="dropdown-item d-flex align-items-center py-2" href="#juegos">
-                                    <img src="assets/icon/sopa.png" alt="Sopa"
-                                        class="diaguita-dropdown-icon me-2">
+                                <a class="dropdown-item d-flex align-items-center py-2" href="javascript:void(0)"
+                                    onclick="avisoPrototipo('Kakán de Letras', 'assets/icon/sopa.png')">
+                                    <img src="assets/icon/sopa.png" alt="Sopa" class="diaguita-dropdown-icon me-2">
                                     Kakán de Letras
                                 </a>
                             </li>
 
                             <li>
-                                <a class="dropdown-item d-flex align-items-center py-2" href="#juegos">
-                                    <img src="assets/icon/puzzle.png" alt="Puzzle"
-                                        class="diaguita-dropdown-icon me-2">
+                                <a class="dropdown-item d-flex align-items-center py-2" href="javascript:void(0)"
+                                    onclick="avisoPrototipo('Fragmentos Legendarios', 'assets/icon/puzzle.png')">
+                                    <img src="assets/icon/puzzle.png" alt="Puzzle" class="diaguita-dropdown-icon me-2">
                                     Fragmentos Legendarios
                                 </a>
                             </li>
 
                             <li>
-                                <a class="dropdown-item d-flex align-items-center py-2" href="#juegos">
-                                    <img src="assets/icon/trivia.png" alt="Trivia"
-                                        class="diaguita-dropdown-icon me-2">
+                                <a class="dropdown-item d-flex align-items-center py-2" href="javascript:void(0)"
+                                    onclick="avisoPrototipo('Trivia Diaguita', 'assets/icon/trivia.png')">
+                                    <img src="assets/icon/trivia.png" alt="Trivia" class="diaguita-dropdown-icon me-2">
                                     Trivia Diaguita
                                 </a>
                             </li>
@@ -73,7 +73,7 @@
                     </li>
                     <li class="nav-item"><a class="nav-link px-3" href="#contacto">Contacto</a></li>
                 </ul>
-                <a href="#juegos" class="btn btn-diaguita rounded-pill px-4">¡A Jugar!</a>
+                <a href="memorice.html" class="btn btn-diaguita rounded-pill px-4">¡A Jugar!</a>
             </div>
         </div>
     </nav>
@@ -92,10 +92,12 @@
                     <p class="lead text-muted mb-4">Plataforma Interactiva para el fortalecimiento de la identidad
                         originaria en las escuelas de la Región de Coquimbo.</p>
                     <div class="d-flex flex-wrap gap-3 mt-4">
-                        <a href="#guias" class="btn btn-diaguita btn-lg rounded-pill px-4 shadow-sm">
+                        <a href="javascript:void(0)"
+                            onclick="avisoGuiasPrototipo('Ver Guías y los Kits de descarga gratuita')"
+                            class="btn btn-diaguita btn-lg rounded-pill px-4 shadow-sm">
                             <i class="bi bi-journal-bookmark-fill me-2"></i> Ver Guías
                         </a>
-                        <a href="#juegos"
+                        <a href="memorice.html"
                             class="btn btn-light btn-lg rounded-pill px-4 d-flex align-items-center shadow-sm btn-play-video">
                             <i class="bi bi-controller text-diaguita-primary fs-4 me-2"></i>
                             <span class="fw-semibold text-diaguita-dark">¡Juguemos!</span>
@@ -161,8 +163,8 @@
                             <img src="assets/img/maxi.png" class="rounded-circle me-3 shadow-sm" alt="Coordinador"
                                 style="width: 65px; height: 65px; object-fit: cover;">
                             <div>
-                                <h6 class="mb-0 fw-bold text-diaguita-dark">Coordinación Proyecto</h6>
-                                <p class="small text-muted mb-0">Gestión y Mediación</p>
+                                <h6 class="mb-0 fw-bold text-diaguita-dark">Maximiliano Díaz</h6>
+                                <p class="small text-muted mb-0">Responsable del proyecto</p>
                             </div>
                         </div>
                         <div class="ps-4">
@@ -225,7 +227,7 @@
                         </li>
                     </ul>
 
-                    <a href="assets/docs/KIT-DOCENTE-DIAGUITA-COMPLETO.pdf" download
+                    <a href="javascript:void(0)" onclick="avisoGuiasPrototipo('el Kit Completo de Guías')"
                         class="btn btn-diaguita rounded-pill px-4 py-2 shadow-sm d-inline-flex align-items-center">
                         <i class="bi bi-file-earmark-arrow-down-fill fs-5 me-2"></i>
                         <div class="text-start">
@@ -233,6 +235,7 @@
                             <small class="opacity-75" style="font-size: 0.7rem;">PDF Actualizado</small>
                         </div>
                     </a>
+
                 </div>
 
                 <div class="col-lg-6 text-center position-relative">
@@ -240,7 +243,7 @@
                         <img src="assets/img/guia.png" alt="Vista previa Guía Educativa"
                             class="img-fluid shadow-lg rounded-3 guide-preview-img">
 
-                        <a href="assets/docs/KIT-DOCENTE-DIAGUITA-COMPLETO.pdf" download
+                        <a href="javascript:void(0)" onclick="avisoGuiasPrototipo('el material de descarga gratuita')"
                             class="position-absolute top-0 end-0 bg-white shadow-lg rounded-circle d-flex align-items-center justify-content-center p-3 m-3 border border-diaguita-primary text-decoration-none floating-download-badge"
                             style="width: 85px; height: 85px; z-index: 5;">
                             <div class="text-center">
@@ -279,7 +282,8 @@
                             <h5 class="fw-bold text-diaguita-dark mb-2">Memorice Ancestral</h5>
                             <p class="text-muted small flex-grow-1">Encuentra los pares de la iconografía diaguita y
                                 entrena tu memoria visual.</p>
-                            <a href="#" class="btn btn-jugar-diaguita rounded-pill px-4 mt-3">Jugar ahora</a>
+                            <a href="memorice.html" class="btn btn-jugar-diaguita rounded-pill px-4 mt-3">Jugar
+                                ahora</a>
                         </div>
                     </div>
                 </div>
@@ -293,7 +297,9 @@
                             <h5 class="fw-bold text-diaguita-dark mb-2">Kakán de Letras</h5>
                             <p class="text-muted small flex-grow-1">Busca palabras clave sobre nuestra cosmovisión
                                 Diaguita.</p>
-                            <a href="#" class="btn btn-jugar-diaguita rounded-pill px-4 mt-3">Jugar ahora</a>
+                            <a href="javascript:void(0)"
+                                onclick="avisoPrototipo('Kakán de Letras', 'assets/icon/sopa.png')"
+                                class="btn btn-diaguita rounded-pill px-4">Jugar ahora</a>
                         </div>
                     </div>
                 </div>
@@ -307,7 +313,9 @@
                             <h5 class="fw-bold text-diaguita-dark mb-2">Fragmentos Legendarios</h5>
                             <p class="text-muted small flex-grow-1">Rearma las vasijas arqueológicas más
                                 emblemáticas de la zona.</p>
-                            <a href="#" class="btn btn-jugar-diaguita rounded-pill px-4 mt-3">Jugar ahora</a>
+                            <a href="javascript:void(0)"
+                                onclick="avisoPrototipo('Fragmentos Legendarios', 'assets/icon/puzzle.png')"
+                                class="btn btn-diaguita rounded-pill px-4">Jugar ahora</a>
                         </div>
                     </div>
                 </div>
@@ -321,7 +329,9 @@
                             <h5 class="fw-bold text-diaguita-dark mb-2">Trivia Diaguita</h5>
                             <p class="text-muted small flex-grow-1">¿Cuánto sabes realmente de tus raíces? Pon a prueba
                                 tus conocimientos.</p>
-                            <a href="#" class="btn btn-jugar-diaguita rounded-pill px-4 mt-3">Jugar ahora</a>
+                            <a href="javascript:void(0)"
+                                onclick="avisoPrototipo('Trivia Diaguita', 'assets/icon/trivia.png')"
+                                class="btn btn-diaguita rounded-pill px-4">Jugar ahora</a>
                         </div>
                     </div>
                 </div>
@@ -441,35 +451,38 @@
                     <h6 class="fw-bold text-dark text-uppercase mb-3" style="font-size: 0.75rem; letter-spacing: 1px;">
                         Juegos</h6>
                     <div class="d-flex flex-wrap gap-2">
-                        <a href="#juegos" class="footer-game-link" title="Memorice">
+                        <a href="memorice.html" class="footer-game-link" title="Memorice Ancestral">
                             <img src="assets/icon/memorice.png" alt="Memorice">
                         </a>
-                        <a href="#juegos" class="footer-game-link" title="Sopa de Letras">
+
+                        <a href="javascript:void(0)" onclick="avisoPrototipo('Kakán de Letras', 'assets/icon/sopa.png')"
+                            class="footer-game-link" title="Kakán de Letras">
                             <img src="assets/icon/sopa.png" alt="Sopa">
                         </a>
-                        <a href="#juegos" class="footer-game-link" title="Puzzle">
+
+                        <a href="javascript:void(0)"
+                            onclick="avisoPrototipo('Fragmentos Legendarios', 'assets/icon/puzzle.png')"
+                            class="footer-game-link" title="Fragmentos Legendarios">
                             <img src="assets/icon/puzzle.png" alt="Puzzle">
                         </a>
-                        <a href="#juegos" class="footer-game-link" title="Trivia">
+
+                        <a href="javascript:void(0)"
+                            onclick="avisoPrototipo('Trivia Diaguita', 'assets/icon/trivia.png')"
+                            class="footer-game-link" title="Trivia Diaguita">
                             <img src="assets/icon/trivia.png" alt="Trivia">
                         </a>
                     </div>
                 </div>
-
-                <div class="col-lg-2">
-                    <h6 class="fw-bold text-dark text-uppercase mb-3" style="font-size: 0.75rem; letter-spacing: 1px;">
-                        Territorio</h6>
-                    <p class="small text-muted">
-                        <i class="bi bi-geo-alt-fill me-1" style="color: #C73E3F;"></i> La Serena, Chile.
-                    </p>
-                </div>
             </div>
 
-            <hr class="my-4 opacity-10">
+        </div>
+        </div>
 
-            <div class="text-center">
-                <p class="small text-muted mb-0">© 2026 Diaguitas Ancestrales. Todos los derechos reservados.</p>
-            </div>
+        <hr class="my-4 opacity-10">
+
+        <div class="text-center">
+            <p class="small text-muted mb-0">© 2026 Diaguitas Ancestrales. Todos los derechos reservados.</p>
+        </div>
         </div>
     </footer>
 
@@ -500,6 +513,85 @@
                 });
             });
         });
+    </script>
+
+    <div class="modal fade" id="modalPrototipo" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 rounded-4 shadow-lg">
+                <div class="modal-body p-5 text-center">
+                    <div class="mb-4 d-flex justify-content-center">
+                        <div style="width: 100px; height: 100px;" class="border rounded-3 p-2 bg-light shadow-sm">
+                            <img id="prototipo-icon" src="" alt="Icono"
+                                style="width: 100%; height: 100%; object-fit: contain;">
+                        </div>
+                    </div>
+                    <h4 class="fw-bold text-diaguita-dark mb-3">Prototipo en Desarrollo</h4>
+                    <p class="text-muted mb-4">
+                        Actualmente esta web es un prototipo pedagógico. El juego <span id="nombre-juego-aviso"
+                            class="fw-bold text-diaguita-primary"></span> estará disponible próximamente.
+                        <br><br>
+                        Por ahora, te invitamos a explorar el <a href="memorice.html"
+                            class="fw-bold text-diaguita-primary text-decoration-none">Memorice Ancestral</a>.
+                    </p>
+                    <button type="button" class="btn btn-diaguita rounded-pill px-5"
+                        data-bs-dismiss="modal">Entendido</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function avisoPrototipo(nombreJuego, rutaIcono) {
+            // Cambiamos contenido dinámicamente
+            document.getElementById('nombre-juego-aviso').textContent = nombreJuego;
+            document.getElementById('prototipo-icon').src = rutaIcono;
+
+            // Mostramos el modal
+            const modalElement = document.getElementById('modalPrototipo');
+            const instance = bootstrap.Modal.getOrCreateInstance(modalElement);
+            instance.show();
+        }
+    </script>
+
+    <div class="modal fade" id="modalGuiasPrototipo" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 rounded-4 shadow-lg">
+                <div class="modal-body p-5 text-center">
+                    <div class="mb-4 d-flex justify-content-center">
+                        <div style="width: 150px;" class="border rounded-3 p-2 bg-light shadow-sm">
+                            <img src="assets/img/guia.png" alt="Guías Diaguita"
+                                style="width: 100%; height: auto; object-fit: contain;">
+                        </div>
+                    </div>
+                    <h4 class="fw-bold text-diaguita-dark mb-3">Recursos en Desarrollo</h4>
+                    <p class="text-muted mb-4">
+                        Actualmente, esta plataforma es un prototipo pedagógico. la sección <span id="nombre-guia-aviso"
+                            class="fw-bold text-diaguita-primary"></span> estarán
+                        disponibles próximamente.
+                    </p>
+                    <p class="text-muted mb-4 small">
+                        Agradecemos tu interés en valorar y difundir la identidad de la cultura Diaguita.
+                    </p>
+                    <button type="button" class="btn btn-diaguita rounded-pill px-5"
+                        data-bs-dismiss="modal">Entendido</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function avisoGuiasPrototipo(nombreRecurso) {
+            // Cambiamos el nombre del recurso dinámicamente
+            document.getElementById('nombre-guia-aviso').textContent = nombreRecurso;
+
+            // El icono es fijo, así que no necesitamos cambiarlo aquí.
+
+            // Abrimos el cuadro flotante
+            const modalElement = document.getElementById('modalGuiasPrototipo');
+            const instance = bootstrap.Modal.getOrCreateInstance(modalElement);
+            instance.show();
+        }
     </script>
 
 </body>
